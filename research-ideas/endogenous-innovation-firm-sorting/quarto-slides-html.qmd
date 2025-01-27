@@ -21,7 +21,7 @@ bibliography: refs.bib
 
 - Innovation is not a fixed value, but an equilibrium object determined within the economic model.
 
-- e.g. As firms enjoy great spillover from incumbent innovation, they will have more incentive to enter into market wherer there is more innovation to their liking.
+- e.g. As firms enjoy great spillover from incumbent innovation, they will have more incentive to enter into market where there is more innovation to their liking.
 
 - e.g. Region's innovation will then cater to the need of its industrial composition.
 

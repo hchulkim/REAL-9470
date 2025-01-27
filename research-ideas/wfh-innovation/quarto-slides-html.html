@@ -1060,14 +1060,31 @@ Hyoungchul Kim
 <li><strong>Establishment data</strong>: South Korea has a data that has universe of the location of establishments and can link them around 2007.</li>
 <li><strong>Innovation data</strong>: I have a data on all the patents and the location of innovators that made such patents from 2000.</li>
 </ul>
+<h4 id="occupation-data">Occupation data</h4>
+<ul>
+<li><p>Maybe use data such as America community survey to see the distribution of the occupation of people in the region.</p></li>
+<li><p>We can get similar data in South Korea as well.</p></li>
+</ul>
 </section>
 <section id="reduced-form-method" class="slide level2">
 <h2>Reduced-form Method</h2>
-<p><span class="math display">\[y_{it}\]</span></p>
+<p>I am not sure how to construct a right regression.</p>
+<ul>
+<li>For treatment variation, I am trying to sth similar to <span class="citation" data-cites="dingel-neiman">Dingel and Neiman (<a href="#/references" role="doc-biblioref" onclick>2020</a>)</span>:
+<ul>
+<li>Use occupation data before COVID-19 to check eligibility level for WFH in each region.</li>
+<li>Use this variation and apply DiD method (using COVID-19 as sort of exogenous shock).</li>
+</ul></li>
+<li>But I am not yet sure how I should construct my dependent variable to examine my research question.
+<ul>
+<li>I am trying to understand how WFH disrupts? or changes the network structure of innvoation.</li>
+</ul></li>
+<li>Some possibility: WFH kinds of widens the choice set for inventors and the firm. Maybe some outsourcing behavior of innovation for firms?</li>
+</ul>
 </section>
 <section id="structural-model" class="slide level2">
 <h2>Structural model</h2>
-<p><strong>TBD</strong></p>
+<p>Maybe some discrete choice model of firms when choosing inventors to connect or hire? WFH would mean change in the level of connection cost.</p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -1092,6 +1109,9 @@ Chen, Chinchih, Carl Benedikt Frey, and Giorgio presidente. 2022. <span>“Disru
 </div>
 <div id="ref-criscuolo" class="csl-entry" role="listitem">
 Criscuolo, Chiara, Peter Gal, Timo Leidecker, Francesco Losma, and Giuseppe Nicoletti. 2021. <span>“The Role of Telework for Productivity During and Post-COVID-19.”</span> <em>Technical Report</em>, no. 31.
+</div>
+<div id="ref-dingel-neiman" class="csl-entry" role="listitem">
+Dingel, Jonathan I, and Brent Neiman. 2020. <span>“How Many Jobs Can Be Done at Home?”</span> <em>Journal of Public Economics</em> 189 (104235).
 </div>
 <div id="ref-forman-van1" class="csl-entry" role="listitem">
 Forman, Chris, and Nicolas van Zeebroeck. 2012. <span>“From Wires to Partners: How the Internet Has Fostered r&amp;d Collaborations Within Firms.”</span> <em>Management Science</em> 58 (8): 1549–68.

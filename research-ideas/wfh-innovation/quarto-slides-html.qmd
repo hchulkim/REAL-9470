@@ -53,13 +53,28 @@ Geographical location of innovation important. How is WFH changing this network 
 - **Establishment data**: South Korea has a data that has universe of the location of establishments and can link them around 2007.
 - **Innovation data**: I have a data on all the patents and the location of innovators that made such patents from 2000.
 
+#### Occupation data
+
+- Maybe use data such as America community survey to see the distribution of the occupation of people in the region.
+
+- We can get similar data in South Korea as well.
+
 ## Reduced-form Method
 
-$$y_{it}$$
+I am not sure how to construct a right regression.
+
+- For treatment variation, I am trying to sth similar to @dingel-neiman:
+  + Use occupation data before COVID-19 to check eligibility level for WFH in each region.
+  + Use this variation and apply DiD method (using COVID-19 as sort of exogenous shock).
+
+- But I am not yet sure how I should construct my dependent variable to examine my research question.
+  + I am trying to understand how WFH disrupts? or changes the network structure of innvoation.
+
+- Some possibility: WFH kinds of widens the choice set for inventors and the firm. Maybe some outsourcing behavior of innovation for firms?
 
 ## Structural model
 
-**TBD**
+Maybe some discrete choice model of firms when choosing inventors to connect or hire? WFH would mean change in the level of connection cost.
 
 ## References
 
