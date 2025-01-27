@@ -1,0 +1,49 @@
+---
+title: "Location sorting and endogenous amenities: Evidence from Amsterdam"
+subtitle: Almagro and Dominguez-lino (**Conditionally accepted at Econometrika**)
+format: 
+  clean-revealjs:
+    self-contained: true
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Hyoungchul Kim
+    affiliations: Wharton UPenn
+date: last-modified
+bibliography: refs.bib
+---
+
+## Motivation
+
+## Research question
+
+## Methodology
+
+## Data overview
+
+## Related literature
+
+## Economic model
+
+## Results
+
+## Robustness checks
+
+## References
+
+::: {#refs}
+:::
+
+## Appendix {#sec-appendix}
+
+```{r}
+#| cache: true
+#| label: tbl-attsum
+#| tbl-cap: Summary of the base R `attitude` dataset
+
+library(modelsummary)
+datasummary_skim(attitude)
+```
+
+[[Back to main]{.button}](#sec-crossref)

@@ -1,0 +1,67 @@
+---
+title: "Work-from-home and network of innovation"
+format: 
+  clean-revealjs:
+    self-contained: true
+    smaller: true
+    slide-number: c
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Hyoungchul Kim
+    affiliations: Wharton UPenn
+date: last-modified
+bibliography: refs.bib
+---
+
+## Motivation
+
+#### Work-From-Home (wfh) is a prevalent form of working arrangement
+
+- @bloom, @barrero, @criscuolo, @aksoy, @galasso, @brynjolfsson
+
+#### Geographic proximity is important in innovation
+
+- Collaboration at a distance is especially challenging in the early stages of research (@lin-frey-wu).
+
+- wfh can lead to slower pace of innovation, negatively affecting the productivity of the firm.
+
+#### But wfh also has benefits that can boost innovation
+
+- Spread of internet connectivity can lead to increased knowledge flow across locations and higher patenting activity (@chen-frey-presidente, @forman-van1, @forman-van2)
+
+- This is because... (@barrero2)
+  + There is opportunity cost to chatting with your coworker in the next-door office.
+  + Remote-collaboration tech expand the opportunities to form teams that are optimized for particular research projects and questions.
+
+## Research question
+
+####
+
+Geographical location of innovation important. How is WFH changing this network of innovation? WFH also allowed rise of contactless communication. Did this lessen the impact of geographical importance of innovation?
+
+## Data overview
+
+#### For US
+
+- **PatentsView** (Universe of patents produced between 1976 to 2022).
+- Link patent assignees to the universe of firms in the restricted **US Longitudinal Business Database (LBS)**.
+
+#### For Korea
+
+- **Establishment data**: South Korea has a data that has universe of the location of establishments and can link them around 2007.
+- **Innovation data**: I have a data on all the patents and the location of innovators that made such patents from 2000.
+
+## Reduced-form Method
+
+$$y_{it}$$
+
+## Structural model
+
+**TBD**
+
+## References
+
+::: {#refs}
+:::

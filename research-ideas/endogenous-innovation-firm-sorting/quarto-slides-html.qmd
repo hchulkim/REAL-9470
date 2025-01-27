@@ -1,0 +1,84 @@
+---
+title: "Firm sorting and endogenous innovation: Evidence from innovative cities in South Korea"
+format: 
+  clean-revealjs:
+    self-contained: true
+    smaller: true
+    slide-number: c
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Hyoungchul Kim
+    affiliations: Wharton UPenn
+date: last-modified
+bibliography: refs.bib
+---
+
+## Motivation
+
+#### Innovation is endogenous
+
+- Innovation is not a fixed value, but an equilibrium object determined within the economic model.
+
+- e.g. As firms enjoy great spillover from incumbent innovation, they will have more incentive to enter into market wherer there is more innovation to their liking.
+
+- e.g. Region's innovation will then cater to the need of its industrial composition.
+
+#### How will this relation affect the distribution of firms/establishments across/within regions? 
+
+## Research question
+
+#### How does preference heterogeneity over innovation shape firm sorting across regions?
+
+## Related literature
+
+#### Innovation literature
+
+#### Firm entry and exit literature
+
+#### Spatial expansion of firms
+
+- @rossi, @kleinman, @jiang.
+- → *Extending empirical firm network literature.*
+
+#### Place-based policy
+
+## Data overview
+
+#### For US
+
+- **PatentsView** (Universe of patents produced between 1976 to 2022).
+- Link patent assignees to the universe of firms in the restricted **US Longitudinal Business Database (LBS)**.
+- Advantage: More rich data.
+- Disadvantage: Not many significant policy shock that might have affected change in innovation compoistion?
+
+#### For Korea
+
+- **Establishment data**: South Korea has a data that has universe of the location of establishments and can link them around 2007.
+- **Innovation data**: I have a data on all the patents and the location of innovators that made such patents from 2000.
+- Advantage: Massive innovative city policy was implemented in South Korea starting from 2010.
+- Disadvantage: Less rich data, limitation in spatial analysis, etc. 
+
+## Descriptive evidence (reduced-form?)
+
+$$\log(y_{it}) = \alpha_0 + \alpha_1 D_{it} + \delta_i + \delta_t +  \varepsilon_{it}$$
+
+We can check total effect by regressing entry of firms on number of patents.
+
+#### Solving endogeneity issue
+
+- Try to use innovative city project as DiD (input of innovative firms in certain regions)
+
+- Also try some shift-share IV: Total innovation growth in a nation ([shift]{.alert}) and past-share of innovation by classification?
+
+## Structural model
+
+**TBD**
+
+Maybe firm entry model in IO?
+
+## References
+
+::: {#refs}
+:::

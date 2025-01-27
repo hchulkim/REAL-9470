@@ -1,0 +1,109 @@
+---
+title: "Transportation debundling in the case of innovation and production in tandem"
+format: 
+  clean-revealjs:
+    self-contained: true
+    smaller: true
+    slide-number: c
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Hyoungchul Kim
+    affiliations: Wharton UPenn
+date: last-modified
+bibliography: refs.bib
+---
+
+## Motivation
+
+#### Colocation of innovation and production by firms
+
+- Innovation and Manufacturing might be complementary within firm boundaries.
+  + Within the United States (@fort-et-al, @tan).
+  + Across countries (@liu).
+
+#### But colocation has a trade-off!
+
+- Heterogenous preferences between Innovation and Manufacturing establishments (that might not be complementary).
+  + Steel manufacturing plant might prefer to be near some water source (e.g. lake, sea).
+  + Innovation plants might prefer to be near a source for rich variety of ideas (e.g. city).
+
+## Research question
+
+#### The advent of a debundling technology
+
+- How will this complementarity affected in the advent of debundling infrastructure investment? Like **Transportation**. 
+
+:::{.callout-note icon="false"}
+## Research question (idea) 
+
+Impact of Transportation Infrastructure on Firm (establishments) Locations and the (De)-Coupling of Innovation and Production.
+:::
+
+## Related literature
+
+#### Complementarity between innovation and production
+
+- @tecu, @lan, @delgado, @fort-et-al, @liu
+- → *Builds a more unified framework with a separating force.*
+
+#### Spatial expansion of firms
+
+- @rossi, @kleinman, @jiang.
+- → *Extending empirical firm network literature.*
+
+#### Transportation infrastructure investment
+
+- **TBD** 
+- → *Examines effect of transportation infrastructure investment of firm activities.*
+
+## Data overview
+
+#### For US
+
+- **PatentsView** (Universe of patents produced between 1976 to 2022).
+- Link patent assignees to the universe of firms in the restricted **US Longitudinal Business Database (LBS)**.
+- Advantage: More rich data.
+- Disadvantage: Not many significant transportation infrastructure investment shock.
+
+#### For Korea
+
+- **Establishment data**: South Korea has a data that has universe of the location of establishments and can link them around 2007.
+- **Innovation data**: I have a data on all the patents and the location of innovators that made such patents from 2000.
+- Advantage: Massive construction of nation-wide high-speed-railroad system starting from 2004.
+- Disadvantage: Less rich data, limitation in spatial analysis, etc. 
+
+## Descriptive evidence (reduced-form?)
+
+:::{.callout-note icon="false"}
+## Effect of transportation connection on patenting establishment's movement
+$$\log(y_{it}) = \alpha_0 + \alpha_1 D_{it} + \delta_i + \delta_t + \varepsilon_{it}$$
+
+$i, t$ is region and year respectively.
+
+$y$ is number of outmigration for patenting establishments in region $i$ in year $t$. 
+
+$D$ is indicator variable that stats whether the region is close to a (new) high-speed-railroad station.
+
+$\delta$ are fixed effects.
+:::
+
+#### Endogeneity issue
+
+- The places that connected to high-speed-railroad might be correlated with the error term (confounder).
+- Possible solution 1: Follow literature that use IV (using historical railroad as IV).
+- Possible solution 2: Follow literature that only uses area that was quasi-randomly connected by high-speed-railroad.
+
+#### Other regression specification?
+
+- We could try to see similar effect but maybe using the number of patents in each region (maybe shift in the number of patents created?).
+
+## Structural model
+
+I am still working on it by reading the literature. For now, considering some discrete choide model which seems to have been used by @liu in international setting.
+
+## References
+
+::: {#refs}
+:::
