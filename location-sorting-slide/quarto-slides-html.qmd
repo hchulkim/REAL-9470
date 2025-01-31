@@ -1,9 +1,11 @@
 ---
 title: "Location sorting and endogenous amenities: Evidence from Amsterdam"
-subtitle: Almagro and Dominguez-lino (**Conditionally accepted at Econometrika**)
+subtitle: Almagro and Dominguez-lino (**Conditionally accepted at Econometrica**)
 format: 
   clean-revealjs:
     self-contained: true
+    smaller: true
+    slide-number: c
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
@@ -16,9 +18,25 @@ bibliography: refs.bib
 
 ## Motivation
 
+#### Amenity, sorting, inquality
+
+#### Amenity is endogenous
+
+- (Local) Amenity is not a fixed value but an equilibrium outcome.
+  - Households make location choices based on their [heterogeneous preferences]{.alert} on different [dimension]{.alert} of amenities.
+  - Local amenities cater to the need of the demographic composition in their neighborhoods.
+
 ## Research question
 
+#### Challenge in prior literature
+
+#### Research question
+
 ## Methodology
+
+#### "Reduced-form" evidence
+
+#### "Structural model"
 
 ## Data overview
 
