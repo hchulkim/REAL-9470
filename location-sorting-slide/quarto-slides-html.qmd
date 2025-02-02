@@ -20,27 +20,99 @@ bibliography: refs.bib
 
 #### Amenity, sorting, inquality
 
+- Socioeconomic inequality is tightly linked to residential choice.
+
+- Important mechanism that amplifies this inequality: [Endogenous amenity]{.alert}.
+
 #### Amenity is endogenous
 
 - (Local) Amenity is not a fixed value but an equilibrium outcome.
   - Households make location choices based on their [heterogeneous preferences]{.alert} on different [dimension]{.alert} of amenities.
   - Local amenities cater to the need of the demographic composition in their neighborhoods.
 
+Thus, fully characterizing this nature of ***endogenous amenity*** is important in understanding its effect on welfare inquality.
+
+## Challenges in prior literature
+
+#### Crude understanding of the nature of amenity
+
+- Amenities are typically modeled as a one-dimensional object (aggregating the variety of location characteristics).
+
+#### Aggregation of amenity into single-index does not allow...
+
+- Households' diverse tastes for different consumption amenities **(horizontal differentiation of neighborhood on the demand side)**.
+
+- Fims providing such amenities cater to this heterogeneity **(differential supply-side responses to consumer heterogeneity)**.
+
+- A more full picture to help design policies that alleviate urban inequality.
+
+[Possibly due to lack of data, model, shock, etc.]{.alert}
+
 ## Research question
 
-#### Challenge in prior literature
+#### How does preference heterogeneity over multiple endogenous consumption amenities shape with-city residential sorting and inequality?
 
-#### Research question
+- How does significant change in local residential composition (e.g. tourism in Amsterdam) affect local residential markets (rental price) and amenity markets (change in local amenities for residents and tourists).
 
 ## Methodology
 
-#### "Reduced-form" evidence
+#### "Reduced-form" regression to show stylized facts and motivation
+
+- Shift-share IV regression to causally estimate the impact of mass tourism on local housing and amenity markets.
+
+  - Higher STR entry led to higher rental price.
+  - Amenities have tilted toward tourists and away from locals.
+  - The composition of residents has changed heterogeneously across neighborhoods.
 
 #### "Structural model"
 
+- Build a dynamic model of a city's rental market that consists of:
+
+  (i) Heterogeneous households and tourist making location decisions,
+  (ii) Landlords who can rent their units to local or tourists,
+  (iii) A market for amenities that microfounds how the composition of amenities endogenously responds to the composition of locals and tourists.
+
 ## Data overview
 
+#### Individual-level data: Statistical bureau of the Netherlands' Centraal Bureau voor de Statistiek (CBS)
+
+- Construct a panel of residential history for the universe of individuals $+$ household-level demographics from tax return data (income, education, employment status, etc).
+
+#### Housing unit data: CBS tax appraisal panel and national rent survey 
+
+- Universe of residential housing units (property value, occupant's tenancy status, rental prices, etc). 
+
+#### Neighborhood-level data: Amsterdam City Data (ACD)
+
+- Two level of geographic units: 99 neighborhoods (wijk) in 25 larger districts (gebied).
+
+- ACD: Annual neighborhood-level outcomes (ethnic, income, rich set of consumption amenities, city-level tourist inflows).
+
+- Set of amenities are narrowed down to six: Restaurants, bars, food stores, non-food stores, nurseries, and "touristic amenities."
+
+#### Short-term rental (STR) listings: Airbnb listing-level observations (geo-coordinates, prices, etc)
+
+***Final sample: Annual panel of location choices and characteristics for 2008-2018 in 22 districts.***
+
 ## Related literature
+
+#### Spatial equilibrium model: Benchmark to study spatial inequality across and within cities
+
+- Focus on within-city margin but silent on the mechanisms through which specific amenities are provided: Bayer et al. (2007); Guerrieri et al. (2013); Ahlfeldt et al. (2015); Su (2022).
+
+- Impose structure on amenity but lack heterogeneity in residents' preferences over amenities or collapse amenities into a single quality index: Couture et al. (2021); hoelzlein (2020); Miyauchi et al. (2021).
+
+  - This paper contributes by allowing for preference heterogeneity over multiple and differentiated amenities.
+
+#### STR industry: Simultaneously studying effects of tourism on both residential and amenity markets
+
+- Calder-Wang (2021): Distributional effects of STR industry on NYC rental market.
+
+- Allen et al. (2021): The effects of seasonal tourism on prices of goods and amenities borne by residents of Barcelona.
+
+#### Discrete-choice tools: Euler Equation in Conditional Choice Probabilities estimator for dynamic estimation
+
+- Hotz and Miller (1993); Arcidiacono and Miller (2011); Aguirregabiria and Magesan (2013); Scott (2013); Kalouptsidi et al. (2021b); Hsiao (2021); Traiberman (2019); Humlum (2021); Diamond, McQuade and Qian (2019); Davis et al. (2019); Davis et al. (2021).
 
 ## Economic model
 
@@ -48,20 +120,15 @@ bibliography: refs.bib
 
 ## Robustness checks
 
-## References
+## Conclusion
 
-::: {#refs}
-:::
+- This paper studies the role of preference heterogeneity over a set of endogenous location amenities in shaping within-city sorting and welfare inequality.
 
-## Appendix {#sec-appendix}
+  - Build a model of residential choice where heterogeneous, forward-looking households consume a bundle of amenities provided by firms in a market for non-tradables. 
+  - Unlike past literature, the paper microfounds how different consumption amenities arise in equilibrium, endogenizing the extent to which neighborhoods become horizontally differentiated.
 
-```{r}
-#| cache: true
-#| label: tbl-attsum
-#| tbl-cap: Summary of the base R `attitude` dataset
+#### Empirical findings
 
-library(modelsummary)
-datasummary_skim(attitude)
-```
+- Heterogeneity in the preferences of residents and supply responses of firms are substantial.
 
-[[Back to main]{.button}](#sec-crossref)
+- Distributional incidence of urban policies depends on heterogeneity on both demand and supply side of the amenities market.
