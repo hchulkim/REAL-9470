@@ -114,11 +114,46 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 
 - Hotz and Miller (1993); Arcidiacono and Miller (2011); Aguirregabiria and Magesan (2013); Scott (2013); Kalouptsidi et al. (2021b); Hsiao (2021); Traiberman (2019); Humlum (2021); Diamond, McQuade and Qian (2019); Davis et al. (2019); Davis et al. (2021).
 
+## Descriptive evidence
+
+- [Fact 1]{.alert}: Tourists and STR listings have grown dramatically and sprawled across Amsterdam.
+
+- [Fact 2]{.alert}: Rents have increased more in neighborhoods with more STR entry.
+
+- [Fact 3]{.alert}: Amenities have tilted towards tourists and away from locals.
+
+- [Fact 4]{.alert}: The composition of residents has changed heterogeneously across neighborhoods.
+
+::::{.columns}
+
+::: {.column width="45%"}
+#### Airbnb intensity and housing market outcomes
+
+![](images/descriptive.png)
+:::
+
+::: {.column width="55%"}
+#### Spatial correlation between tourist-oriented and local-oriented amenities
+
+![](images/descriptive2.png)
+:::
+::::
+
 ## Economic model
 
 ## Results
 
 ## Robustness checks
+
+#### Robustness of real estate supply elasticity
+
+- The paper's main counterfactuals are robust to different supply elasticities, ranging from the baseline inelastic San Francisco case to the highly elastic case of Atlanta.
+
+#### Comparison of static and dynamic model estimates
+
+- Examine the impact of removing forward-looking behavior ($\beta = 0$) and location capital, i.e., the dynamic state-dependent component of moving costs.
+
+- Most of the coefficients of the demand estimates become significantly different, hinting the importance of dynamic component in the model.
 
 ## Conclusion
 
