@@ -60,6 +60,8 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 
 - Shift-share IV regression to causally estimate the impact of mass tourism on local housing and amenity markets.
 
+- Identification: ["Shift"]{.alert} *(time variation in worldwide demand for STR)* - ["Share"]{.alert} *(neighborhood-level exposure to tourism using spatial distribution of historic monuments)*
+
   - Higher STR entry led to higher rental price.
   - Amenities have tilted toward tourists and away from locals.
   - The composition of residents has changed heterogeneously across neighborhoods.
@@ -139,7 +141,67 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 :::
 ::::
 
-## Economic model
+## Economic model 1: Endogenous amenities
+
+**Notation**: $J+1$ locations; $K$ types of locals and tourist type $T$;  $S$ sectors; Population composition $M_{jt} \equiv [M_{jt}^1, ... , M_{jt}^K, M_{jt}^T]'$; Amenities $a_{jt} \equiv [N_{1jt}, ..., N_{sjt}]'$
+
+#### Demand for amenities
+
+Household with Cobb-Douglass (CD) perferences over housing $H$ and amenities $C$, CD preferences across amenity sector and CES preferences over varieties within a sector:
+
+$$q_{isjt} = \sum_k q_{isjt}^k M_{jt}^k, \quad \text{where} \, \, q_{isjt}^k = \frac{\alpha_s^k \phi^k \omega_t^k}{p_{isjt}}\left( \frac{p_{isjt}}{P_{sjt}}\right)^{1-\sigma_s}$$
+
+#### Supply of amenities (monopolistic competition, same marginal cost, free entry): Zero-profit condition
+
+$$(p_{sjt} - c_{sjt}) q_{sjt} = \underbrace{F_{sjt}(N_{jt})}_{\text{Fixed cost per period}}, \quad \text{where} \, \, N_{jt} = \sum_s N_{sjt}.$$
+
+#### Equilibrium amenities: Adding up equations above gives market clearing condition
+
+$$N_{sjt} = \frac{1}{\sigma_s F_{sjt}} \sum_k \alpha_s^k \phi^k \omega_t^k M_{jt}^k, \quad a_{jt}=A(M_{jt})$$
+
+## Economic model 2: Housing supply
+
+- Total housing stock (measured in units of floor space) $H_{jt}$ is assumed to be inelastic in the short-rn and follows an exogenously determined path over time.
+
+- A continuum of absentee landlords make a binary choice between renting in the long-term market (LT) or in the short-term market (ST).
+
+#### An individual landlord's problem
+
+$$\max\{ \alpha \cdot \overbrace{\gamma_{jt}}^{\text{LT income}} + \varepsilon_{LT}, \, \, \alpha \cdot \underbrace{p_{jt}}_{\text{ST income}} - \overbrace{\kappa_{jt}}^{\text{operating cost}} + \varepsilon_{ST} \},$$
+
+#### Housing supply in each location
+
+$$H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}) = \frac{\exp(\alpha \gamma_{jt})}{\exp (\alpha \gamma_{jt}) + \exp(\alpha p_{jt} - \kappa_{jt})} H_{jt},$$
+
+$$H_{jt}^{ST,S} (\gamma_{jt}, p_{jt}) = H_{jt} - H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}).$$
+
+## Economic model 3: Housing demand
+
+#### Housing demand for locals
+
+$$H_{jt}^{LT,D} (\gamma_t, a_t) = \sum_{k=1}^K M_{jt}^k (r_t, a_t) f_{jt}^k.$$
+
+#### Housing demand for tourists
+
+$\exists$ an exogenous number of tourists $M_t^T$ arriving into the city and choosing to stay in a short-term rental or a hotel. Housing demand from tourists in each location becomes: 
+
+$$H_{jt}^{ST,D} (p_{jt}, a_t) = \overbrace{M_{jt}^{ST} (p_t, a_t)}^{\text{tourists staying in ST}} \cdot \underbrace{f_{jt}}_{\text{average size of a unit in location j}}$$
+
+## Economic model 4: Equilibrium
+
+Population composition, rents, STR prices, and amenities are endogenously and jointly determined in stationary equilibrium.
+
+:::{.callout-important icon="false"}
+## Definition (Stationary equilibrium) - Brief version
+
+In ***stationary equilibrium***,
+
+1. the long-term rental market clears for every location,
+
+2. the short-term rental market clears for every location,
+
+3. the amenities market clears.
+:::
 
 ## Results
 
