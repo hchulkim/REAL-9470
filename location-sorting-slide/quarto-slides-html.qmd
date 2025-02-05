@@ -74,6 +74,26 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
   (ii) Landlords who can rent their units to local or tourists,
   (iii) A market for amenities that microfounds how the composition of amenities endogenously responds to the composition of locals and tourists.
 
+## Related literature
+
+#### Spatial equilibrium model: Benchmark to study spatial inequality across and within cities
+
+- Focus on within-city margin but silent on the mechanisms through which specific amenities are provided: Bayer et al. (2007); Guerrieri et al. (2013); Ahlfeldt et al. (2015); Su (2022).
+
+- Impose structure on amenity but lack heterogeneity in residents' preferences over amenities or collapse amenities into a single quality index: Couture et al. (2021); hoelzlein (2020); Miyauchi et al. (2021).
+
+  - This paper contributes by allowing for preference heterogeneity over multiple and differentiated amenities.
+
+#### STR industry: Simultaneously studying effects of tourism on both residential and amenity markets
+
+- Calder-Wang (2021): Distributional effects of STR industry on NYC rental market.
+
+- Allen et al. (2021): The effects of seasonal tourism on prices of goods and amenities borne by residents of Barcelona.
+
+#### Discrete-choice tools: Euler Equation in Conditional Choice Probabilities estimator for dynamic estimation
+
+- Hotz and Miller (1993); Arcidiacono and Miller (2011); Aguirregabiria and Magesan (2013); Scott (2013); Kalouptsidi et al. (2021b); Hsiao (2021); Traiberman (2019); Humlum (2021); Diamond, McQuade and Qian (2019); Davis et al. (2019); Davis et al. (2021).
+
 ## Data overview
 
 #### Individual-level data: Statistical bureau of the Netherlands' Centraal Bureau voor de Statistiek (CBS)
@@ -95,26 +115,6 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 #### Short-term rental (STR) listings: Airbnb listing-level observations (geo-coordinates, prices, etc)
 
 ***Final sample: Annual panel of location choices and characteristics for 2008-2018 in 22 districts.***
-
-## Related literature
-
-#### Spatial equilibrium model: Benchmark to study spatial inequality across and within cities
-
-- Focus on within-city margin but silent on the mechanisms through which specific amenities are provided: Bayer et al. (2007); Guerrieri et al. (2013); Ahlfeldt et al. (2015); Su (2022).
-
-- Impose structure on amenity but lack heterogeneity in residents' preferences over amenities or collapse amenities into a single quality index: Couture et al. (2021); hoelzlein (2020); Miyauchi et al. (2021).
-
-  - This paper contributes by allowing for preference heterogeneity over multiple and differentiated amenities.
-
-#### STR industry: Simultaneously studying effects of tourism on both residential and amenity markets
-
-- Calder-Wang (2021): Distributional effects of STR industry on NYC rental market.
-
-- Allen et al. (2021): The effects of seasonal tourism on prices of goods and amenities borne by residents of Barcelona.
-
-#### Discrete-choice tools: Euler Equation in Conditional Choice Probabilities estimator for dynamic estimation
-
-- Hotz and Miller (1993); Arcidiacono and Miller (2011); Aguirregabiria and Magesan (2013); Scott (2013); Kalouptsidi et al. (2021b); Hsiao (2021); Traiberman (2019); Humlum (2021); Diamond, McQuade and Qian (2019); Davis et al. (2019); Davis et al. (2021).
 
 ## Descriptive evidence
 
@@ -203,9 +203,27 @@ In ***stationary equilibrium***,
 3. the amenities market clears.
 :::
 
-## Results
+## Results: Amenities
 
-## Robustness checks
+Estimation of $\beta_s^k$: Parameter that shows how population's expenditure is allocated to each amenity sector $s$.
+
+![](images/amenity.png)
+
+## Results: Housing supply
+
+Estimation: log difference between two supply choices
+
+$$\log H_{jt}^{LT,S} - \log H_{jt}^{ST,S} = \alpha (\gamma_{jt} - p_{jt})+ \kappa_j + \kappa_t + \nu_{jt}$$
+
+![](images/housing-supply.png)
+
+## (Brief) Counterfactuals and robustness checks
+
+#### Counterfactuals
+
+- Compare it with homogeneous preference specification: Less sorting, higher inequality.
+
+- STR tax or a touristic amenities (TA) tax: Monotonic welfare increase for STR tax, but more nuanced for TA tax.
 
 #### Robustness of real estate supply elasticity
 
