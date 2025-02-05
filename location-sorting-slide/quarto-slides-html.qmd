@@ -147,7 +147,7 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 
 #### Demand for amenities
 
-Household with Cobb-Douglass (CD) perferences over housing $H$ and amenities $C$, CD preferences across amenity sector and CES preferences over varieties within a sector:
+Household with Cobb-Douglas (CD) perferences over housing $H$ and amenities $C$, CD preferences across amenity sector and CES preferences over varieties within a sector:
 
 $$q_{isjt} = \sum_k q_{isjt}^k M_{jt}^k, \quad \text{where} \, \, q_{isjt}^k = \frac{\alpha_s^k \phi^k \omega_t^k}{p_{isjt}}\left( \frac{p_{isjt}}{P_{sjt}}\right)^{1-\sigma_s}$$
 
@@ -161,7 +161,7 @@ $$N_{sjt} = \frac{1}{\sigma_s F_{sjt}} \sum_k \alpha_s^k \phi^k \omega_t^k M_{jt
 
 ## Economic model 2: Housing supply
 
-- Total housing stock (measured in units of floor space) $H_{jt}$ is assumed to be inelastic in the short-rn and follows an exogenously determined path over time.
+- Total housing stock (measured in units of floor space) $H_{jt}$ is assumed to be inelastic in the short-rn and follows an exogenously determined path over time. [[Justfication]{.button}](#sec-justification)
 
 - A continuum of absentee landlords make a binary choice between renting in the long-term market (LT) or in the short-term market (ST).
 
@@ -169,23 +169,35 @@ $$N_{sjt} = \frac{1}{\sigma_s F_{sjt}} \sum_k \alpha_s^k \phi^k \omega_t^k M_{jt
 
 $$\max\{ \alpha \cdot \overbrace{\gamma_{jt}}^{\text{LT income}} + \varepsilon_{LT}, \, \, \alpha \cdot \underbrace{p_{jt}}_{\text{ST income}} - \overbrace{\kappa_{jt}}^{\text{operating cost}} + \varepsilon_{ST} \},$$
 
-#### Housing supply in each location
+#### Housing supply in each location ($\varepsilon \sim \text{T1EV}$)
 
 $$H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}) = \frac{\exp(\alpha \gamma_{jt})}{\exp (\alpha \gamma_{jt}) + \exp(\alpha p_{jt} - \kappa_{jt})} H_{jt},$$
 
 $$H_{jt}^{ST,S} (\gamma_{jt}, p_{jt}) = H_{jt} - H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}).$$
 
-## Economic model 3: Housing demand
+## Economic model 3-1: Housing demand (locals)
 
 #### Housing demand for locals
 
 $$H_{jt}^{LT,D} (\gamma_t, a_t) = \sum_{k=1}^K M_{jt}^k (r_t, a_t) f_{jt}^k.$$
 
-#### Housing demand for tourists
+## Economic model 3-2: Housing demand (tourists)
 
-$\exists$ an exogenous number of tourists $M_t^T$ arriving into the city and choosing to stay in a short-term rental or a hotel. Housing demand from tourists in each location becomes: 
+$\exists$ an exogenous number of tourists $M_t^T$ arriving into the city and choosing to stay in a short-term rental or a hotel. 
 
-$$H_{jt}^{ST,D} (p_{jt}, a_t) = \overbrace{M_{jt}^{ST} (p_t, a_t)}^{\text{tourists staying in ST}} \cdot \underbrace{f_{jt}}_{\text{average size of a unit in location j}}$$
+#### Tourists in short-term rentals
+
+- Payoff for tourists in STR: $u_{jt}^{ST} = \delta_j^{ST} + \delta_{t}^{ST} + \delta_p^{ST} \log p_{jt} + \delta_a^{ST} \log a_{jt} + \zeta_{jt}^{ST}.$
+
+- (number of tourists staying in STR): $M_{jt}^{ST} (p_t, a_t) = \frac{\exp (u_{jt}^{ST})}{\sum_{j' = 0}^J \exp (u_{j't}^{ST})} \cdot M_t^T$.
+
+#### Tourists in hotels
+
+- Distribute total number of tourists in hotel in proportion to the hotel capacity observed in the data.
+
+Housing demand from tourists (for STR) becomes: 
+
+$$H_{jt}^{ST,D} (p_{jt}, a_t) = M_{jt}^{ST} (p_t, a_t) \cdot \underbrace{f_{jt}}_{\text{average size of a unit in location j}}$$
 
 ## Economic model 4: Equilibrium
 
@@ -247,3 +259,9 @@ $$\log H_{jt}^{LT,S} - \log H_{jt}^{ST,S} = \alpha (\gamma_{jt} - p_{jt})+ \kapp
 - Heterogeneity in the preferences of residents and supply responses of firms are substantial.
 
 - Distributional incidence of urban policies depends on heterogeneity on both demand and supply side of the amenities market.
+
+## Housing supply inelasticity {#sec-justification}
+
+- On average, annual growth of housing stock in Amsterdam is 1.2%, similar to the 0.9% value for San Francisco, one of the least housing-elastic cities in the US.
+
+- Also, the assumption of inelastic housing supply is broadly in line with other studies of housing supply in the Netherlands (Vermeulen and Rouwendal, 2007).
