@@ -141,7 +141,7 @@ Thus, fully characterizing this nature of ***endogenous amenity*** is important 
 :::
 ::::
 
-## Economic model 1: Endogenous amenities
+## Economic model 1: Endogenous amenities {#sec-amenity-eq}
 
 **Notation**: $J+1$ locations; $K$ types of locals and tourist type $T$;  $S$ sectors; Population composition $M_{jt} \equiv [M_{jt}^1, ... , M_{jt}^K, M_{jt}^T]'$; Amenities $a_{jt} \equiv [N_{1jt}, ..., N_{sjt}]'$
 
@@ -155,11 +155,11 @@ $$q_{isjt} = \sum_k q_{isjt}^k M_{jt}^k, \quad \text{where} \, \, q_{isjt}^k = \
 
 $$(p_{sjt} - c_{sjt}) q_{sjt} = \underbrace{F_{sjt}(N_{jt})}_{\text{Fixed cost per period}}, \quad \text{where} \, \, N_{jt} = \sum_s N_{sjt}.$$
 
-#### Equilibrium amenities: Adding up equations above gives market clearing condition
+#### Equilibrium amenities: Adding up equations above gives market clearing condition [[back]{.button}](#sec-amenity-est)
 
-$$N_{sjt} = \frac{1}{\sigma_s F_{sjt}} \sum_k \alpha_s^k \phi^k \omega_t^k M_{jt}^k, \quad a_{jt}=A(M_{jt})$$
+$$N_{sjt} = \frac{1}{\sigma_s F_{sjt}} \sum_k \alpha_s^k \phi^k \omega_t^k M_{jt}^k, \quad a_{jt}=A(M_{jt})$$ 
 
-## Economic model 2: Housing supply
+## Economic model 2: Housing supply {#sec-housingsupply}
 
 - Total housing stock (measured in units of floor space) $H_{jt}$ is assumed to be inelastic in the short-rn and follows an exogenously determined path over time. [[Justfication]{.button}](#sec-justification)
 
@@ -175,11 +175,25 @@ $$H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}) = \frac{\exp(\alpha \gamma_{jt})}{\exp (\a
 
 $$H_{jt}^{ST,S} (\gamma_{jt}, p_{jt}) = H_{jt} - H_{jt}^{LT,S} (\gamma_{jt}, p_{jt}).$$
 
+[[back]{.button}](#sec-supply-est)
+
 ## Economic model 3-1: Housing demand (locals)
 
-#### Housing demand for locals
+#### Dynamic location choice of locals
 
-$$H_{jt}^{LT,D} (\gamma_t, a_t) = \sum_{k=1}^K M_{jt}^k (r_t, a_t) f_{jt}^k.$$
+- Invidual state variables: Location $j_{it-1}$ and Tenure $\tau_{jt-1}$.
+
+- Aggregate state variables: Rent $\gamma_t$, Amenities $a_t$, Exogenous location attributes $b_t$, and unobservable factors $\zeta_t$.
+
+#### Household $i$'s dynamic problem (value function)
+
+$$V^k (x_{it}, \varepsilon_{it}, \underbrace{\omega_{t}}_{\text{aggregate state}}) = \max_{j \in \{ 0, 1, ..., J \}} u^k (j, x_{jt}, \omega_{t}) + \varepsilon_{ijt} + \beta \mathbb{E} \left[ V^k(x_{it+1}, \varepsilon_{it+1}, \omega_{t+1}) \mid j, x_{it}, \varepsilon_{it} \right].$$
+
+- If we assume $\varepsilon_{ijt} \sim \text{T1EV}$, we can also get probability a type $k$ household chooses $j$, conditional on state $x_{it}$: $\mathbb{P}_{t}^k (j \mid x_{it})$.
+
+- We can also denote $\pi_t^k (j, \tau)$ as type $k$'s joint probability of living in location $j$ with tenure $\tau$ at the end of period $t$.
+
+- Then, type $k$ population count for location $j$ is: $M_{jt}^k (\gamma_t, a_t) = \sum_\tau \pi_t^k (j, \tau) M_t^k \quad \forall k \in \{ 1, ...,K \}$.
 
 ## Economic model 3-2: Housing demand (tourists)
 
@@ -194,10 +208,6 @@ $\exists$ an exogenous number of tourists $M_t^T$ arriving into the city and cho
 #### Tourists in hotels
 
 - Distribute total number of tourists in hotel in proportion to the hotel capacity observed in the data.
-
-Housing demand from tourists (for STR) becomes: 
-
-$$H_{jt}^{ST,D} (p_{jt}, a_t) = M_{jt}^{ST} (p_t, a_t) \cdot \underbrace{f_{jt}}_{\text{average size of a unit in location j}}$$
 
 ## Economic model 4: Equilibrium
 
@@ -215,17 +225,34 @@ In ***stationary equilibrium***,
 3. the amenities market clears.
 :::
 
-## Results: Amenities
+## Results: Amenities {#sec-amenity-est}
 
-Estimation of $\beta_s^k$: Parameter that shows how population's expenditure is allocated to each amenity sector $s$.
+Re-arranging equation in the model and taking logs: $\log N_{sjt} = - \log F_{sjt}(N_{jt}) + \log \left( \sum_k \beta_s^k \phi^k \omega_t^k M_{jt}^k \right)$ [[Model-eq]{.button}](#sec-amenity-eq) [[Identification]{.button}](#sec-identification-amenity)
+
+Estimation of $\beta_s^k \equiv \alpha_s^k/\sigma^s$: Parameter that shows how population's expenditure is allocated to each amenity sector $s$.
 
 ![](images/amenity.png)
 
-## Results: Housing supply
+## Results: Housing demand {#sec-demand-est}
+
+::::{.columns}
+:::{.column width="50%"}
+![](images/demand1.png)
+:::
+
+:::{.column width="50%"}
+The paper estimate (normalization of the hotel option's payoff to zero): $\small \log \mathbb{P}_{jt}^{ST} - \log \mathbb{P}_{t}^H = \delta_j^{ST} + \delta_t^{ST} + \delta_p^{ST} \log p_{jt} + \delta_a^{ST} \log a_{jt} + \zeta_{jt}^{ST}$
+
+![](images/demand2.png)
+:::
+::::
+
+## Results: Housing supply {#sec-supply-est}
 
 Estimation: log difference between two supply choices
 
-$$\log H_{jt}^{LT,S} - \log H_{jt}^{ST,S} = \alpha (\gamma_{jt} - p_{jt})+ \kappa_j + \kappa_t + \nu_{jt}$$
+$$\log H_{jt}^{LT,S} - \log H_{jt}^{ST,S} = \alpha (\gamma_{jt} - p_{jt})+ \kappa_j + \kappa_t + \nu_{jt}$$ 
+[[model-eq]{.button}](#sec-housingsupply) [[Identification]{.button}](#sec-identification-supply)
 
 ![](images/housing-supply.png)
 
@@ -260,8 +287,32 @@ $$\log H_{jt}^{LT,S} - \log H_{jt}^{ST,S} = \alpha (\gamma_{jt} - p_{jt})+ \kapp
 
 - Distributional incidence of urban policies depends on heterogeneity on both demand and supply side of the amenities market.
 
+## APPENDIX
+
 ## Housing supply inelasticity {#sec-justification}
 
 - On average, annual growth of housing stock in Amsterdam is 1.2%, similar to the 0.9% value for San Francisco, one of the least housing-elastic cities in the US.
 
 - Also, the assumption of inelastic housing supply is broadly in line with other studies of housing supply in the Netherlands (Vermeulen and Rouwendal, 2007).
+
+[[back]{.button}](#sec-housingsupply)
+
+## Identification of amenity {#sec-identification-amenity}
+
+- Parameterize $F_{sjt}(N_{jt}) = \Lambda_j \Lambda_t \cdot \underbrace{R(N_{jt})}_{\text{annual rental price of commercial real estate}} \cdot \Omega_{sjt}$
+
+- Assume $R(N_{jt}) = N_{jt}^\eta$, where $\eta$ is inverse supply elasticity of real-estate (calibrated).
+
+- Identification issue: Amenity supply shock is correlated with $N_{sjt}$ and $M_{jt}^k$. We need [amenity demand shifters as IV]{.alert}.
+
+- The paper constructs an instrument that shift population composition: $Z_{jt}^k = \omega_t^k \cdot\underbrace{S_{jt}^{\gamma(k)}}_{\text{housing stock by tenancy status}}$.
+
+[[back]{.button}](#sec-amenity-est)
+
+## Identification of housing supply {#sec-identification-supply}
+
+- OLS estimation leads to bias due to simultaneity bias from regressing quantities on prices. 
+
+- Use shift-share predicted tourist demand as IV.
+
+[[back]{.button}](#sec-supply-est)
